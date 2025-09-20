@@ -73,12 +73,9 @@ sources:
               - name: ar
                 description: "站點地址中文版。"
 
-  - name: weather_staging # dbt 專案中這個資料集的邏輯名稱
-    description: "從 GCS 載入到 BigQuery Staging 資料集的氣象原始資料。"
-    database: ubike-471005 # 你的 GCP 專案 ID
-    schema: ubike_staging # 你的 BigQuery Staging 資料集 ID
 
-    tables:
+
+
       # 天氣原始資料表：ubike_staging.raw_weather_data
       - name: raw_weather_data # 天氣資料表的實際名稱
         description: "來自中央氣象局的即時天氣觀測原始資料 (已初步清理)。"

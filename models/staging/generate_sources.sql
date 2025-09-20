@@ -1,1 +1,0 @@
-{{ codegen.generate_source(schema_name='ubike_staging',database_name='ubike-471005') }}
