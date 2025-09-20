@@ -39,5 +39,7 @@ models:
   ubike_project:
     staging:
       +materialized: view
+    processing:
+      +materialized: view
     marts:
       +materialized: table
