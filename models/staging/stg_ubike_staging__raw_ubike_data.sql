@@ -28,7 +28,7 @@ renamed AS (
     ar AS address,
     act AS is_active,
     CAST(sbi_detail.eyb AS INT64) AS electric_bikes,
-    CAST(sbi_detail.b2 AS INT64) AS normal_bikes
+    CAST(sbi_detail.yb2 AS INT64) AS normal_bikes
   FROM unnested
 )
 
