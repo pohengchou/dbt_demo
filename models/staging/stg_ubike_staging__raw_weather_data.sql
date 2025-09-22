@@ -22,7 +22,7 @@ flattened AS (
         
         ObsTime.DateTime AS observation_timestamp,
         
-        WeatherElement.VisibilityDescription AS visibility_description,
+        NULLIF(WeatherElement.VisibilityDescription, -99) AS visibility_description,
         NULLIF(CAST(WeatherElement.AirTemperature AS FLOAT64), -99) AS air_temperature,
         NULLIF(CAST(WeatherElement.AirPressure AS FLOAT64), -99) AS air_pressure,
         NULLIF(CAST(WeatherElement.RelativeHumidity AS FLOAT64), -99) AS relative_humidity,
