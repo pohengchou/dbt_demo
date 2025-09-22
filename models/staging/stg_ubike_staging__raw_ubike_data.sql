@@ -15,7 +15,7 @@ unnested AS (
 
 renamed AS (
   SELECT
-    sno AS station_id,
+    CAST(sno AS INT64) AS station_id,
     sna AS station_name,
     sarea AS district,
     lat AS latitude,
