@@ -31,7 +31,7 @@ flattened AS (
         NULLIF(CAST(WeatherElement.UVIndex AS INT64), -99) AS uv_index,
         NULLIF(CAST(WeatherElement.SunshineDuration AS FLOAT64), -99) AS sunshine_duration,
         NULLIF(CAST(WeatherElement.NOW.Precipitation AS FLOAT64), -99) AS precipitation,
-        WeatherElement.Weather AS weather_description,
+        NULLIF(WeatherElement.Weather, '-99') AS weather_description,
         
         NULLIF(CAST(WeatherElement.DailyExtreme.DailyLow.TemperatureInfo.AirTemperature AS FLOAT64), -99) AS daily_low_temp,
         PARSE_TIMESTAMP('%Y-%m-%dT%H:%M:%E*S%Ez',

@@ -15,7 +15,3 @@ models:
       - name: station_id
         tests:
           - not_null
-
-      - name: weather_description
-        tests:
-          - not_null
