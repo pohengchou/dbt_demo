@@ -1,8 +1,4 @@
 SELECT  
-    --主鍵(Primary Key)
-    station_id  AS station_id_key,
-    
-    -- 描述性維度：這些欄位用來分類和描述站點
     station_id,
     station_name,
     district,
