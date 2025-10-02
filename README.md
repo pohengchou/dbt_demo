@@ -6,7 +6,7 @@
 
 | 檔案名稱 / 模型類型 | 實體化策略 | 核心工程亮點 (BigQuery 優化與建模) |
 | :--- | :--- | :--- |
-| **`fact_ubike_status`** | **增量更新** | 狀態事實表。使用 **`api_request_at` 按日分區**，按 `station_id_key` **聚類**，大幅優化查詢。 |
+| **`fact_ubike_status`** | **增量更新** | ubike事實表。使用 **`api_request_at` 按日分區**，按 `station_id_key` **聚類**，大幅優化查詢。 |
 | **`fact_weather`** | **增量更新** | 氣象事實表。使用 **`observation_timestamp` 按日分區**，確保高效率地處理新數據。 |
 | **`dim_ubike_stations`** | **維度表** | 包含 $\text{Ubike}$ 站點的靜態資訊。 |
 | **`dim_weather_stations`** | **維度表** | 包含氣象站的地理資訊，使用 **`county_name` 字串分區**。 |
