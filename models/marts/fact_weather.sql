@@ -1,12 +1,13 @@
 {{ config(
     materialized='incremental',
-    incremental_strategy='insert_overwrite',
+    incremental_strategy='merge ',
+    unique_key=['observation_timestamp', 'weather_station_id_key'],
     partition_by={
       "field": "observation_timestamp",
       "data_type": "timestamp",
       "granularity": "day"
     },
-    cluster_by=['weather_station_id_key']
+    cluster_by=['weather_station_id_key', 'observation_timestamp']
 ) }}
 
 SELECT
