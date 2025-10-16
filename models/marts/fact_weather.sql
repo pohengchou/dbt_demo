@@ -1,6 +1,6 @@
 {{ config(
     materialized='incremental',
-    incremental_strategy='merge ',
+    incremental_strategy='merge',
     unique_key=['observation_timestamp', 'weather_station_id_key'],
     partition_by={
       "field": "observation_timestamp",

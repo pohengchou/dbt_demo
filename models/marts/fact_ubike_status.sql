@@ -1,6 +1,6 @@
 {{ config(
     materialized='incremental',
-    incremental_strategy='merge ',
+    incremental_strategy='merge',
     unique_key=['api_request_at', 'station_id_key'], 
     partition_by={
       "field": "api_request_at",
